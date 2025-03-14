@@ -1,0 +1,102 @@
+.profile {
+  display: flex;
+  padding: 34px 0 20px;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+}
+
+.profile__avatar {
+  height: 190px;
+  width: 190px;
+  margin: 0 20px 0 0;
+  border-radius: 8px;
+}
+
+.profile__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__name {
+  margin: 0 0 12px;
+  line-height: 1;
+  color: rgba(33, 33, 33, 1);
+}
+
+.profile__name, .profile__description {
+  font-weight: 500;
+  max-width: 420px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile__description {
+  margin: 0;
+  color: rgba(33, 33, 33, 0.7);
+}
+
+.profile__edit-btn {
+  margin-top: auto;
+  font-weight: 500;
+  color: rgba(33, 33, 33, 1);
+  background: none;
+  border-style: none;
+  width: 107.34px;
+  height: 16px;
+  display: flex;
+  gap: 8px;
+  opacity: 0.7;
+  padding: 0;
+}
+
+.profile__post-btn {
+  margin-left: auto;
+  width: 149px;
+  height: 52px;
+  color: rgba(252, 245, 229, 1);
+  background: none;
+  align-self: flex-end;
+  border-style: none;
+  padding: 0;
+  border-radius: 8px;
+  background-color: rgba(33, 33, 33, 1);
+}
+
+@media screen and (max-width: 627px){
+  .profile {
+    max-width: 288px;
+    text-align: center;
+    display:block;
+    padding-top: 20px;
+  }
+
+  .profile__column {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .profile__avatar {
+    margin: 0 0 12px;
+    height: 80px;
+    width: 80px;
+  }
+
+  .profile__description {
+    margin: 6px 0 32px;
+    max-width: 288px;
+  }
+
+  .profile__name {
+    font-size: 20px;
+    margin-bottom: 0;
+    max-width: 288px;
+  }
+
+  .profile__post-btn {
+    margin: 20px 0 0;
+    width: 100%;
+  }
+}

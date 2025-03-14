@@ -1,0 +1,16 @@
+.header {
+  background-color: #fff;
+  padding: 10px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.header__logo {
+  width: 94px;
+  height: 26px;
+  font-family: DM Mono;
+  font-weight: 500;
+  line-height: 1;
+  color: rgba(33, 33, 33, 1);
+
+}
