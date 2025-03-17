@@ -35,3 +35,4 @@ This webpage was deployed to my Github
 
 ## Video
 
+You can find the video file [here](https://drive.google.com/file/d/1rKvsi2ZUHqpAGfge0Ch0WU29re7sindc/view?usp=sharing)
