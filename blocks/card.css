@@ -43,15 +43,12 @@
 
 @media screen and (max-width: 627px) {
   .card__image {
-    height: 296px;
-  }
-
-  .card__title {
-    max-width: 262px;
+    height: 288px;
   }
 
   .card__title {
     font-size: 16px;
+    max-width: 262px;
+    line-height: 1;
   }
-
 }
