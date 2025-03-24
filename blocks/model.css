@@ -21,6 +21,9 @@
 
 .model__title {
   margin: 0 0 32px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
 }
 
 .model__label {
@@ -28,12 +31,21 @@
   flex-direction: column;
   gap: 8px;
   margin: 0 0 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+  color: rgba(33, 33, 33, 0.7);
 }
 
 .model__input {
   padding: 16px 12px;
   border: 1px solid rgba(33, 33, 33, 0.4);
   border-radius: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: rgba(33, 33, 33, 1);
+
 }
 
 .model__input:hover {
