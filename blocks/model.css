@@ -1,0 +1,75 @@
+.model {
+  position: fixed;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.model__container {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 32px 50px;
+  max-width: 730px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  border-style: none;
+  border-radius: 8px;
+}
+
+.model__title {
+  margin: 0 0 32px;
+}
+
+.model__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 32px;
+}
+
+.model__input {
+  padding: 16px 12px;
+  border: 1px solid rgba(33, 33, 33, 0.4);
+  border-radius: 8px;
+}
+
+.model__input:hover {
+  border: 1px solid rgba(33, 33, 33, 1);
+  cursor: pointer;
+}
+
+.model__close-btn {
+  background-image: url(../images/close-btn.svg);
+  position: absolute;
+  top: 32px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border-style: none;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.model__close-btn:hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.model__save-btn {
+  width: 156px;
+  height: 52px;
+  padding: 18px 0;
+  border-style: none;
+  border-radius: 8px;
+  background-color: rgba(33, 33, 33, 1);
+  color: rgba(252, 245, 229, 1);
+}
+
+.model__save-btn:hover {
+  background-color: rgba(33, 33, 33, 0.8);
+  cursor: pointer;
+}
