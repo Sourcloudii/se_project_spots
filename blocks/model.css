@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 10px;
+  /* visibility: hidden; */
 }
 
 .model__container {
@@ -45,7 +47,6 @@
   font-size: 20px;
   line-height: 1;
   color: rgba(33, 33, 33, 1);
-
 }
 
 .model__input:hover {
@@ -74,14 +75,50 @@
 .model__save-btn {
   width: 156px;
   height: 52px;
-  padding: 18px 0;
+  padding: 18px 32px;
   border-style: none;
   border-radius: 8px;
   background-color: rgba(33, 33, 33, 1);
   color: rgba(252, 245, 229, 1);
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
 }
 
 .model__save-btn:hover {
   background-color: rgba(33, 33, 33, 0.8);
   cursor: pointer;
+}
+
+@media screen and (max-width: 627px) {
+  .model {
+    padding: 0 10px;
+  }
+
+  .model__container {
+    padding: 12px;
+  }
+
+  .model__title {
+    font-size: 20px;
+    margin: 10px 0 34px;
+  }
+
+  .model__close-btn {
+    top: 12px;
+    right: 12px;
+  }
+
+  .model__input {
+    font-size: 16px;
+  }
+
+  .model__save-btn {
+    width: 100%;
+  }
+
+  .model__label {
+    margin-bottom: 24px;
+  }
 }
