@@ -1,4 +1,4 @@
-.model {
+.modal {
   position: fixed;
   inset: 0px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -14,7 +14,7 @@
   visibility: visible;
 }
 
-.model__container {
+.modal__container {
   background-color: rgba(255, 255, 255, 1);
   padding: 32px 50px;
   max-width: 730px;
@@ -25,14 +25,14 @@
   border-radius: 8px;
 }
 
-.model__title {
+.modal__title {
   margin: 0 0 32px;
   font-weight: 500;
   font-size: 32px;
   line-height: 1;
 }
 
-.model__label {
+.modal__label {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -43,7 +43,7 @@
   color: rgba(33, 33, 33, 0.7);
 }
 
-.model__input {
+.modal__input {
   padding: 16px 12px;
   border: 1px solid rgba(33, 33, 33, 0.4);
   border-radius: 8px;
@@ -53,12 +53,12 @@
   color: rgba(33, 33, 33, 1);
 }
 
-.model__input:hover {
+.modal__input:hover {
   border: 1px solid rgba(33, 33, 33, 1);
   cursor: pointer;
 }
 
-.model__close-btn {
+.modal__close-btn {
   background-image: url(../images/close-btn.svg);
   position: absolute;
   top: 32px;
@@ -71,12 +71,12 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-.model__close-btn:hover {
+.modal__close-btn:hover {
   opacity: 0.4;
   cursor: pointer;
 }
 
-.model__save-btn {
+.modal__save-btn {
   width: 156px;
   height: 52px;
   padding: 18px 32px;
@@ -90,39 +90,39 @@
   line-height: 100%;
 }
 
-.model__save-btn:hover {
+.modal__save-btn:hover {
   background-color: rgba(33, 33, 33, 0.8);
   cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
-  .model {
+  .modal {
     padding: 0 10px;
   }
 
-  .model__container {
+  .modal__container {
     padding: 12px;
   }
 
-  .model__title {
+  .modal__title {
     font-size: 20px;
     margin: 10px 0 34px;
   }
 
-  .model__close-btn {
+  .modal__close-btn {
     top: 12px;
     right: 12px;
   }
 
-  .model__input {
+  .modal__input {
     font-size: 16px;
   }
 
-  .model__save-btn {
+  .modal__save-btn {
     width: 100%;
   }
 
-  .model__label {
+  .modal__label {
     margin-bottom: 24px;
   }
 }
