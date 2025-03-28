@@ -37,18 +37,20 @@
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Window View"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title">Val Thorens</h2>
-                <button type="button" class="card__like-btn"></button>
-              </div>
-            </li>
-            <li class="card">
+            <template id="card-template">
+             <li class="card">
+                <img
+                  src=""
+                 alt=""
+                  class="card__image"
+                />
+               <div class="card__content">
+                 <h2 class="card__title"></h2>
+                 <button type="button" class="card__like-btn"></button>
+                </div>
+             </li>
+            </template>
+            <!-- <li class="card">
               <img
                 src="./images/2-photo-by-ceiline-from-pexels.jpg"
                 alt="Window View"
@@ -102,7 +104,7 @@
                 <h2 class="card__title">Mountain house</h2>
                 <button type="button" class="card__like-btn"></button>
               </div>
-            </li>
+            </li> -->
           </ul>
         </section>
       </main>
@@ -114,19 +116,19 @@
           <button class="model__close-btn"></button>
           <h2 class="model__title">Edit profile</h2>
           <form name="edit-profile" class="model__form">
-            <label for="name" class="model__label">
+            <label for="profile-name-input" class="model__label">
               Name
               <input
-                for="name"
+              id="profile-name-input"
                 type="text"
                 class="model__input"
                 placeholder="Type your name"
               />
             </label>
-            <label for="description" class="model__label">
+            <label for="profile-description-input" class="model__label">
               description
               <input
-                for="description"
+                id="profile-description-input"
                 type="text"
                 class="model__input"
                 placeholder="Describe yourself"
