@@ -17,11 +17,7 @@
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="./images/avatar.jpg"
-            alt="Avatar Profile"
-            class="profile__avatar"
-          />
+          <img src="./images/avatar.jpg" alt="Avatar Profile" class="profile__avatar" />
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -39,14 +35,13 @@
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
-                <img src="" alt="" class="card__image" />
+                <div class="card__delete-overlay">
+                  <img src="" alt="" class="card__image" />
+                  <button class="card__delete-btn" type="button" aria-label="Delete Card"></button>
+                </div>
                 <div class="card__content">
                   <h2 class="card__title"></h2>
-                  <button
-                    type="button"
-                    class="card__like-btn"
-                    aria-label="Like Card"
-                  ></button>
+                  <button type="button" class="card__like-btn" aria-label="Like Card"></button>
                 </div>
               </li>
             </template>
@@ -58,18 +53,12 @@
       </footer>
       <div class="modal" id="edit-modal">
         <div class="modal__container">
-          <button class="modal__close-btn" aria-label="Close Modal"></button>
+          <button type="button" class="modal__close-btn" aria-label="Close Modal"></button>
           <h2 class="modal__title">Edit profile</h2>
           <form name="edit-profile" class="modal__form">
             <label for="profile-name-input" class="modal__label">
               Name
-              <input
-                required
-                id="profile-name-input"
-                type="text"
-                class="modal__input"
-                placeholder="Type your name"
-              />
+              <input required id="profile-name-input" type="text" class="modal__input" placeholder="Type your name" />
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
@@ -83,6 +72,50 @@
             </label>
             <button class="modal__save-btn">Save</button>
           </form>
+        </div>
+      </div>
+      <div class="modal" id="add-card-modal">
+        <div class="modal__container">
+          <button class="modal__close-btn" aria-label="Close Modal"></button>
+          <h2 class="modal__title">New post</h2>
+          <form name="edit-card" class="modal__form">
+            <label for="card-link-input" class="modal__label">
+              Image link
+              <input
+                required
+                id="card-link-input"
+                type="url"
+                name="url"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+              />
+            </label>
+            <label for="card-caption-input" class="modal__label">
+              Caption
+              <input
+                required
+                id="card-caption-input"
+                type="text"
+                name="caption"
+                class="modal__input"
+                placeholder="Type your caption"
+              />
+            </label>
+            <button class="modal__save-btn">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="preview-modal">
+        <div class="modal__container modal__container_type_preview">
+          <div class="modal__preview-content">
+            <button
+              type="button"
+              class="modal__close-btn modal__close_type_preview-btn"
+              aria-label="Close Modal"
+            ></button>
+            <img class="modal__image" src="" alt="" />
+            <p class="modal__caption"></p>
+          </div>
         </div>
       </div>
     </div>
