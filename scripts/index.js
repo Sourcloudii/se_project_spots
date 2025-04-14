@@ -77,7 +77,8 @@ function handleCardFormSubmit(evt) {
   const inputValues = { name: cardCaptionInput.value, link: cardlinkInput.value };
   const cardEl = getCardEl(inputValues);
   cardsList.prepend(cardEl);
-  closeModal(editModal);
+  closeModal(cardModal);
+  cardForm.reset();
 }
 
 //Edit Profile
