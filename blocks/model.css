@@ -32,7 +32,6 @@
 .modal__container_type_preview {
   background-color: transparent;
   position: relative;
-  padding: 0;
   display: flex;
   justify-content: center;
 }
@@ -58,9 +57,8 @@
   object-fit: contain;
   max-width: 80vw;
   max-height: 80vh;
-  width: 100%;
   border-radius: 8px;
-
+  min-width: 288px;
 }
 
 .modal__title {
@@ -176,8 +174,16 @@
     font-size: 16px;
   }
 
+  .modal__image {
+    border-radius: 4px;
+  }
+
   .modal__close-btn_type_preview {
     top: -48px;
     right: 0;
+  }
+
+  .modal__container_type_preview {
+    padding: 0;
   }
 }
