@@ -9,7 +9,7 @@
   
 **Intro**
   
-This is my third project as an aspiring software engineer here at TripleTen. Spots is a web app where users will be able to upload photos, like other users posts, and make small adjustments to their profile. I will heopfully cointinue to improve this project in the future as m yskills increase overtime.
+This is my third project as an aspiring software engineer here at TripleTen. Spots is a web app where users will be able to upload photos, like other users' posts, and make small adjustments to their profiles. I will hopefully continue to improve this project in the future as my skills increase over time.
   
 **Figma**  
   
