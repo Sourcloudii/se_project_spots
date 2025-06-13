@@ -1,3 +1,7 @@
+import { enableValidation, settings } from "../scripts/validation.js";
+import { initialCards } from "../scripts/cards.js";
+import "./index.css";
+
 //Universal variables
 const closeBtn = document.querySelectorAll(".modal__close-btn");
 const modals = document.querySelectorAll(".modal");
@@ -128,3 +132,5 @@ initialCards.forEach(function (item) {
   const cardEl = getCardEl(item);
   cardsList.append(cardEl);
 });
+
+enableValidation(settings);
