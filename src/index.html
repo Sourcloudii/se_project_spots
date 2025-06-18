@@ -16,7 +16,12 @@
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img src="<%= require('./images/avatar.jpg') %>" alt="Avatar Profile" class="profile__avatar" />
+          <div class="profile__avatar-container">
+            <button class="profile__avatar-btn">
+              <img class="profile__pencil-icon" src="<%= require('./images/profile_pencil.svg')%>" alt="Pencil Icon" />
+            </button>
+            <img src="<%= require('./images/avatar.jpg') %>" alt="Avatar Profile" class="profile__avatar" />
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -36,7 +41,7 @@
               <li class="card">
                 <div class="card__delete-overlay">
                   <img src="" alt="" class="card__image" />
-                  <button class="card__delete-btn" type="button" aria-label="Delete Card"></button>
+                  <button class="card__delete-btn" type="button" aria-label="Trash Button"></button>
                 </div>
                 <div class="card__content">
                   <h2 class="card__title"></h2>
@@ -82,6 +87,42 @@
               <span id="profile-description-input-error" class="modal__error"></span>
             </label>
             <button class="modal__save-btn">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="avatar-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn" aria-label="Close Modal"></button>
+          <h2 class="modal__title">Edit profile avatar</h2>
+          <form name="edit-avatar" class="modal__form">
+            <label for="profile-avatar-input" class="modal__label">
+              Profile Picture
+              <input
+                required
+                id="profile-avatar-input"
+                type="url"
+                name="avatar"
+                class="modal__input"
+                placeholder="Paste the link to an image"
+                required
+              />
+              <span id="profile-avatar-input-error" class="modal__error"></span>
+            </label>
+            <button class="modal__save-btn">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="delete-modal">
+        <div class="modal__container modal__container_type_delete">
+          <button
+            type="button"
+            class="modal__close-btn modal__close-btn_type_preview"
+            aria-label="Close Modal"
+          ></button>
+          <h2 class="modal__title modal__title_delete">Are you sure you want to delete this image?</h2>
+          <form id="delete-form" class="modal__form modal__form_delete">
+            <button type="submit" class="modal__delete-btn modal__defualt-btn">Delete</button>
+            <button type="button" class="modal__cancel-btn modal__defualt-btn">Cancel</button>
           </form>
         </div>
       </div>
