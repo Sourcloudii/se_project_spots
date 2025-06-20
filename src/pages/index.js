@@ -40,7 +40,6 @@ const cardForm = cardModal.querySelector(".modal__form");
 const cardPostBtn = document.querySelector(".profile__post-btn");
 const cardlinkInput = cardModal.querySelector("#card-link-input");
 const cardCaptionInput = cardModal.querySelector("#card-caption-input");
-const cardSubmitBtn = cardModal.querySelector(".modal__save-btn");
 
 //Preview Modal
 const previewModal = document.querySelector("#preview-modal");
