@@ -2,8 +2,10 @@ export function setBtnText(btn, isLoading, loadingTxT = "Saving...", defaultTxt 
   if (isLoading) {
     btn.textContent = loadingTxT;
     btn.disabled = true;
-  } else {
+  } else if (defaultTxt === "Delete") {
     btn.textContent = defaultTxt;
     btn.disabled = false;
+  } else {
+    btn.textContent = defaultTxt;
   }
 }

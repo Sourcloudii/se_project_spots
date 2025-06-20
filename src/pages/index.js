@@ -31,7 +31,6 @@ const editModalDescriptionInput = editModal.querySelector("#profile-description-
 //Delete Card Modal
 const deleteCardModal = document.querySelector("#delete-modal");
 const deleteFormEl = deleteCardModal.querySelector(".modal__form");
-const cardDeletebtn = deleteCardModal.querySelector(".modal__delete-btn");
 const cardDeleteCancelBtn = deleteCardModal.querySelector(".modal__cancel-btn");
 let currentCard, currentCardId;
 
@@ -41,6 +40,7 @@ const cardForm = cardModal.querySelector(".modal__form");
 const cardPostBtn = document.querySelector(".profile__post-btn");
 const cardlinkInput = cardModal.querySelector("#card-link-input");
 const cardCaptionInput = cardModal.querySelector("#card-caption-input");
+const cardSubmitBtn = cardModal.querySelector(".modal__save-btn");
 
 //Preview Modal
 const previewModal = document.querySelector("#preview-modal");
@@ -82,7 +82,7 @@ function getCardEl(data) {
   cardImageEl.src = data.link;
   cardImageEl.alt = data.alt || data.name;
 
-  if(data.isLiked) {
+  if (data.isLiked) {
     cardLikeEl.classList.add("card__like-btn_liked");
   }
 
@@ -151,12 +151,12 @@ function handleAvatarFormSubmit(evt) {
 
   setBtnText(submitBtn, true);
 
-
   api
     .editUserAvatar({ avatar: avatarInput.value })
     .then((data) => {
       profileAvatar.src = data.avatar;
       closeModal(avatarModal);
+      avatarForm.reset();
     })
     .catch(console.error)
     .finally(() => {
@@ -171,6 +171,8 @@ function handleCardFormSubmit(evt) {
 
   setBtnText(submitBtn, true);
 
+  console.log(submitBtn.disabled);
+
   api
     .postNewCard({
       name: cardCaptionInput.value,
@@ -181,10 +183,13 @@ function handleCardFormSubmit(evt) {
       cardsList.prepend(cardEl);
       closeModal(cardModal);
       cardForm.reset();
+      console.log(submitBtn.disabled);
     })
     .catch(console.error)
     .finally(() => {
       setBtnText(submitBtn, false);
+
+      console.log(submitBtn.disabled);
     });
 }
 
@@ -220,9 +225,9 @@ function handleDeleteSubmit(evt) {
         closeModal(deleteCardModal);
       })
       .catch(console.error)
-    .finally(() => {
-      setBtnText(submitBtn, false, "Deleting...", "Delete");
-    });
+      .finally(() => {
+        setBtnText(submitBtn, false, "Deleting...", "Delete");
+      });
   }
 }
 
