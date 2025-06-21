@@ -37,8 +37,8 @@
 }
 
 .card__delete-btn:hover {
- background-image: url(../images/trashBin-hover.svg);
- cursor: pointer;
+  background-image: url(../images/trashBin-hover.svg);
+  cursor: pointer;
 }
 
 .card__like-btn {
