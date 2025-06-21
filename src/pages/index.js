@@ -170,8 +170,6 @@ function handleCardFormSubmit(evt) {
 
   setBtnText(submitBtn, true);
 
-  console.log(submitBtn.disabled);
-
   api
     .postNewCard({
       name: cardCaptionInput.value,
@@ -182,26 +180,29 @@ function handleCardFormSubmit(evt) {
       cardsList.prepend(cardEl);
       closeModal(cardModal);
       cardForm.reset();
-      console.log(submitBtn.disabled);
     })
     .catch(console.error)
     .finally(() => {
       setBtnText(submitBtn, false);
-
-      console.log(submitBtn.disabled);
     });
 }
 
 function handleLiked(id, evt) {
   const isLiked = evt.target.classList.contains("card__like-btn_liked");
   if (!isLiked) {
-    api.handleLikeStatus(id, false).then(() => {
-      evt.target.classList.add("card__like-btn_liked");
-    });
+    api
+      .handleLikeStatus(id, false)
+      .then(() => {
+        evt.target.classList.add("card__like-btn_liked");
+      })
+      .catch(console.error);
   } else
-    api.handleLikeStatus(id, true).then(() => {
-      evt.target.classList.remove("card__like-btn_liked");
-    });
+    api
+      .handleLikeStatus(id, true)
+      .then(() => {
+        evt.target.classList.remove("card__like-btn_liked");
+      })
+      .catch(console.error);
 }
 
 function handleDeleteCard(cardEl, id) {
