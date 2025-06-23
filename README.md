@@ -25,6 +25,7 @@ Good luck and have fun!
 
 - HTML
 - CSS
+- JavaScript
 - Responsive Design
 
 ## Deployment

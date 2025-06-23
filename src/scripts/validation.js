@@ -51,7 +51,7 @@ const toggleButtonState = (inputList, buttonElement) => {
   }
 };
 
-const resetValidation = (formElement, inputList) => {
+export const resetValidation = (formElement, inputList) => {
   inputList.forEach((input) => {
     hideInputError(formElement, input, settings);
   });
@@ -61,6 +61,7 @@ const setEventListeners = (formElement, config) => {
   const inputList = Array.from(formElement.querySelectorAll(config.inputSelector));
   const buttonElement = formElement.querySelector(config.submitButtonSelector);
 
+  resetValidation(formElement, inputList);
   toggleButtonState(inputList, buttonElement);
 
   inputList.forEach((inputElement) => {
@@ -72,7 +73,9 @@ const setEventListeners = (formElement, config) => {
 };
 
 export const enableValidation = (config) => {
-  const formList = document.querySelectorAll(config.formSelector);
+  const formList = Array.from(document.querySelectorAll(config.formSelector)).filter(
+    (form) => form.id !== "delete-form"
+  );
 
   formList.forEach((formElement) => {
     formElement.addEventListener("submit", (evt) => {
